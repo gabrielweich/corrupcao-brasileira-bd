@@ -805,6 +805,3 @@ values(
   TO_DATE('2003/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
   TO_DATE('2016/05/10 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
 );
-
-
-
