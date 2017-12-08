@@ -49,36 +49,25 @@ create table pagamentos(
   constraint pk_pagamentos primary key(id_pagamento) 
 );
 
-create table mandatos_legislativos(
-  id_mandato_legislativo number(10) not null,
+create table mandatos(
+  id_mandato number(10) not null,
   id_pessoa number(10) not null,
   id_partido number(10) not null,
   id_esfera number(10) not null,
   ocupacao varchar(150) not null,
   data_inicio date not null, 
   data_fim date,
-  constraint pk_mandatos_legislativos primary key (id_mandato_legislativo)
+  constraint pk_mandatos primary key (id_mandato)
 );
 
-create table mandatos_executivos(
-  id_mandato_executivo number(10) not null,
-  id_pessoa number(10) not null,
-  id_partido number(10) not null,
-  id_esfera number(10) not null,
-  ocupacao varchar(150) not null,
-  data_inicio date not null, 
-  data_fim date,
-  constraint pk_mandatos_executivos primary key (id_mandato_executivo)
-);
-
-create table mandatos_judiciarios(
-  id_mandato_judiciario number(10) not null,
+create table judiciarios(
+  id_judiciario number(10) not null,
   id_pessoa number(10) not null,
   orgao varchar(150) not null,
   ocupacao varchar(150) not null,
   data_inicio date not null, 
   data_fim date,
-  constraint pk_mandatos_judiciarios primary key (id_mandato_judiciario)
+  constraint pk_judiciarios primary key (id_judiciario)
 );
 
 create table esferas(
@@ -112,7 +101,7 @@ create table paises(
 create table listas_negras(
   id_lista_negra number(10) not null,
   nome varchar(100) not null,
-  constraint pk_listas_negras primary key(id_lista_negra)
+  constraint pk_lst_ngr primary key(id_lista_negra)
 );
 
 create table pessoas_listas_negras(
@@ -120,7 +109,7 @@ create table pessoas_listas_negras(
   id_lista_negra number(10) not null,
   motivo varchar(150),
   vivo varchar(1) not null CHECK(vivo IN ('S','N')),
-  constraint pk_pessoas_listas_negras primary key(id_pessoa, id_lista_negra)
+  constraint pk_pess_lst_ngr primary key(id_pessoa, id_lista_negra)
 );
 
 
@@ -133,34 +122,21 @@ add constraint fk_empresas_cargos
 foreign key(id_empresa) references empresas;
 
 
-alter table mandatos_executivos
-add constraint fk_pessoas_mandatos_executivos
+alter table mandatos
+add constraint fk_pessoas_mandatos
 foreign key(id_pessoa) references pessoas;
 
-alter table mandatos_executivos
-add constraint fk_partidos_mandatos_executivos
+alter table mandatos
+add constraint fk_partidos_mandatos
 foreign key(id_partido) references partidos;
 
-alter table mandatos_executivos
-add constraint fk_esferas_mandatos_executivos
+alter table mandatos
+add constraint fk_esferas_mandatos
 foreign key(id_esfera) references esferas;
 
 
-alter table mandatos_legislativos
-add constraint fk_pessoas_mandatos_legislativos
-foreign key(id_pessoa) references pessoas;
-
-alter table mandatos_legislativos
-add constraint fk_partidos_mandatos_legislativos
-foreign key(id_partido) references partidos;
-
-alter table mandatos_legislativos
-add constraint fk_esferas_mandatos_legislativos
-foreign key(id_esfera) references esferas;
-
-
-alter table mandatos_judiciarios
-add constraint fk_pessoas_mandatos_judiciarios
+alter table judiciarios
+add constraint fk_pessoas_judiciarios
 foreign key(id_pessoa) references pessoas;
 
 
@@ -180,17 +156,17 @@ foreign key(id_lista_negra) references listas_negras;
 
 
 alter table codinomes 
-add constraint fk_pessoas_codinomes 
+add constraint fk_pess_cdnm 
 foreign key(id_pessoa) references pessoas;
 
 alter table pagamentos 
-add constraint fk_empresas_pagamentos 
+add constraint fk_empr_pgmt
 foreign key(id_empresa) references empresas;
 
 alter table pagamentos 
-add constraint fk_pessoas_pagamentos_op 
+add constraint fk_pess_pgmt_op 
 foreign key(id_operador) references pessoas;
 
 alter table pagamentos 
-add constraint fk_pessoas_pagamentos_de 
+add constraint fk_pess_pgmt_de 
 foreign key(id_destinatario) references pessoas;
