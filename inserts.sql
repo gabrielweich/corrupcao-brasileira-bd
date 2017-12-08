@@ -253,3 +253,92 @@ values(15, 'Maneta');
 
 insert into codinomes(id_pessoa, codinome) 
 values(16, 'Ferrari');
+
+
+insert into esferas(id_esfera, id_estado)
+values(1, 25);
+
+insert into mandatos_legislativos(
+  id_mandato_legislativo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  1,
+  3,
+  1,
+  1,
+  'Deputado Estadual',
+  TO_DATE('1987/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('1991/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+
+insert into esferas(id_esfera, id_estado, id_pais)
+values(2, 25, 1);
+
+insert into mandatos_legislativos(
+  id_mandato_legislativo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  2,
+  3,
+  1,
+  2,
+  'Deputado Federal',
+  TO_DATE('1991/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('1995/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+insert into mandatos_legislativos(
+  id_mandato_legislativo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  3,
+  3,
+  1,
+  2,
+  'Deputado Federal',
+  TO_DATE('1999/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2005/12/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+
+insert into esferas(id_esfera, id_pais)
+values(3, 1);
+
+
+insert into mandatos_executivos(
+  id_mandato_executivo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  4,
+  3,
+  1,
+  3,
+  'Ministro-chefe da Casa Civil',
+  TO_DATE('2003/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2005/06/21 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
