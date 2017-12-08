@@ -46,6 +46,95 @@ values(15, 'Pedro da Silva Corrêa de Oliveira Andrade Neto', TO_DATE('1948/01/0
 insert into pessoas(id_pessoa, nome, data_nascimento, cpf) 
 values(16, 'Delcídio do Amaral Gómez', TO_DATE('1948/01/07 00:00:00', 'yyyy/mm/dd hh24:mi:ss'), 64603499671);
 
+
+insert into paises(id_pais, pais)
+values(1, 'Brasil');
+
+
+insert into estados(id_estado, id_pais, estado)
+values(1, 1, 'Acre');
+
+insert into estados(id_estado, id_pais, estado)
+values(2, 1, 'Alagoas');
+
+insert into estados(id_estado, id_pais, estado)
+values(3, 1, 'Amapá');
+
+insert into estados(id_estado, id_pais, estado)
+values(4, 1, 'Amazonas');
+
+insert into estados(id_estado, id_pais, estado)
+values(5, 1, 'Bahia');
+
+insert into estados(id_estado, id_pais, estado)
+values(6, 1, 'Ceará');
+
+insert into estados(id_estado, id_pais, estado)
+values(7, 1, 'Distrito Federal');
+
+insert into estados(id_estado, id_pais, estado)
+values(8, 1, 'Espírito Santo');
+
+insert into estados(id_estado, id_pais, estado)
+values(9, 1, 'Goiás');
+
+insert into estados(id_estado, id_pais, estado)
+values(10, 1, 'Maranhão');
+
+insert into estados(id_estado, id_pais, estado)
+values(11, 1, 'Mato Grosso');
+
+insert into estados(id_estado, id_pais, estado)
+values(12, 1, 'Mato Grosso do Sul');
+
+insert into estados(id_estado, id_pais, estado)
+values(13, 1, 'Minas Gerais');
+
+insert into estados(id_estado, id_pais, estado)
+values(14, 1, 'Pará');
+
+insert into estados(id_estado, id_pais, estado)
+values(15, 1, 'Paraíba');
+
+insert into estados(id_estado, id_pais, estado)
+values(16, 1, 'Paraná');
+
+insert into estados(id_estado, id_pais, estado)
+values(17, 1, 'Pernambuco');
+
+insert into estados(id_estado, id_pais, estado)
+values(18, 1, 'Piauí');
+
+insert into estados(id_estado, id_pais, estado)
+values(19, 1, 'Rio de Janeiro');
+
+insert into estados(id_estado, id_pais, estado)
+values(20, 1, 'Rio Grande do Norte');
+
+insert into estados(id_estado, id_pais, estado)
+values(21, 1, 'Rio Grande do Sul');
+
+insert into estados(id_estado, id_pais, estado)
+values(22, 1, 'Rondônia');
+
+insert into estados(id_estado, id_pais, estado)
+values(23, 1, 'Roraima');
+
+insert into estados(id_estado, id_pais, estado)
+values(24, 1, 'Santa Catarina');
+
+insert into estados(id_estado, id_pais, estado)
+values(25, 1, 'São Paulo');
+
+insert into estados(id_estado, id_pais, estado)
+values(26, 1, 'Sergipe');
+
+insert into estados(id_estado, id_pais, estado)
+values(27, 1, 'Tocantins');
+
+
+
+
 insert into cidades(cidade, uf) 
 values('Porto Alegre','RS');
 
