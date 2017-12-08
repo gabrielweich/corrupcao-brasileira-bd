@@ -255,6 +255,9 @@ insert into codinomes(id_pessoa, codinome)
 values(16, 'Ferrari');
 
 
+--José Dirceu de Oliveira e Silva--
+
+--Deputado Estadual de São Paulo
 insert into esferas(id_esfera, id_estado)
 values(1, 25);
 
@@ -278,6 +281,7 @@ values(
 );
 
 
+--Deputado Federal por São Paulo
 insert into esferas(id_esfera, id_estado, id_pais)
 values(2, 25, 1);
 
@@ -320,8 +324,119 @@ values(
 );
 
 
+--Ministro
 insert into esferas(id_esfera, id_pais)
 values(3, 1);
+
+insert into mandatos_executivos(
+  id_mandato_executivo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  1,
+  3,
+  1,
+  3,
+  'Ministro-chefe da Casa Civil',
+  TO_DATE('2003/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2005/06/21 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+
+
+--Antonio Palocci Filho--
+
+--Municipal Ribeirão Preto
+insert into esferas(id_esfera, id_cidade)
+values(4, 7);
+
+insert into mandatos_legislativos(
+  id_mandato_legislativo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  4,
+  8,
+  1,
+  4,
+  'Vereador',
+  TO_DATE('1988/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('1989/03/31 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+
+--Deputado Estadual de São Paulo
+insert into mandatos_legislativos(
+  id_mandato_legislativo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  5,
+  8,
+  1,
+  1,
+  'Deputado Estadual',
+  TO_DATE('1990/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('1992/03/31 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+
+--Prefeito Ribeirão Preto
+insert into esferas(id_esfera, id_cidade)
+values(5, 7);
+
+insert into mandatos_executivos(
+  id_mandato_executivo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  2,
+  8,
+  1,
+  5,
+  'Prefeito',
+  TO_DATE('1993/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('1996/03/31 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+insert into mandatos_executivos(
+  id_mandato_executivo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  3,
+  8,
+  1,
+  5,
+  'Prefeito',
+  TO_DATE('2001/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2002/03/31 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
 
 
 insert into mandatos_executivos(
@@ -335,10 +450,69 @@ insert into mandatos_executivos(
 )
 values(
   4,
+  8,
+  1,
   3,
+  'Ministro da Fazenda',
+  TO_DATE('2003/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2006/03/27 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+
+insert into mandatos_legislativos(
+  id_mandato_legislativo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  6,
+  8,
+  1,
+  2,
+  'Deputado Federal',
+  TO_DATE('1999/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2001/03/31 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+insert into mandatos_legislativos(
+  id_mandato_legislativo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  7,
+  8,
+  1,
+  2,
+  'Deputado Federal',
+  TO_DATE('2007/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2011/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+insert into mandatos_executivos(
+  id_mandato_executivo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  5,
+  8,
   1,
   3,
   'Ministro-chefe da Casa Civil',
-  TO_DATE('2003/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
-  TO_DATE('2005/06/21 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+  TO_DATE('2011/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2011/06/07 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
 );
+
