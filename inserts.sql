@@ -194,6 +194,7 @@ values(7, 'Queiroz Galvão', 'O Grupo Queiroz Galvão S.A. é um conglomerado in
 insert into empresas(id_empresa, nome, descricao, cnpj) 
 values(8, 'Mendes Júnior', 'Mercado de construção pesada no Brasil e no exterior, desenvolvendo projetos nos segmentos de dutos, edificações, eletromecânica, energia, hidrelétricas, indústrias, infra-estrutura, manutenção industrial, petróleo e gás.', 17162082000173);
 
+
 insert into partidos(id_partido, nome, sigla, numero_eleitoral) 
 values(1, 'Partido dos Trabalhadores', 'PT', 13);
 
@@ -516,3 +517,28 @@ values(
   TO_DATE('2011/06/07 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
 );
 
+
+--Eduardo Cunha
+
+--Deputado Federal pelo Rio de Janeiro
+insert into esferas(id_esfera, id_estado, id_pais)
+values(6, 19, 1);
+
+insert into mandatos_legislativos(
+  id_mandato_legislativo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  8,
+  9,
+  2,
+  6,
+  'Deputado Federal',
+  TO_DATE('2003/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2016/09/12 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
