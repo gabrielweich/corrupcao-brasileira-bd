@@ -74,7 +74,7 @@ create table mandatos_executivos(
 create table mandatos_judiciarios(
   id_mandato_judiciario number(10) not null,
   id_pessoa number(10) not null,
-  orgao: varchar(150) not null,
+  orgao varchar(150) not null,
   ocupacao varchar(150) not null,
   data_inicio date not null, 
   data_fim date,
@@ -83,9 +83,9 @@ create table mandatos_judiciarios(
 
 create table esferas(
   id_esfera number(10) not null,
-  id_cidade number(10) not null,
-  id_estado number(10) not null,
-  id_pais number(10) not null,
+  id_cidade number(10),
+  id_estado number(10),
+  id_pais number(10),
   constraint pk_esferas primary key(id_esfera)
 );
 
@@ -109,6 +109,20 @@ create table paises(
   constraint pk_paises primary key(id_pais)
 );
 
+create table listas_negras(
+  id_lista_negra number(10) not null,
+  nome varchar(100) not null,
+  constraint pk_listas_negras primary key(id_lista_negra)
+);
+
+create table pessoas_listas_negras(
+  id_pessoa number(10) not null,
+  id_lista_negra number(10) not null,
+  motivo varchar(150),
+  vivo varchar(1) not null CHECK(vivo IN ('S','N')),
+  constraint pk_pessoas_listas_negras primary key(id_pessoa, id_lista_negra)
+);
+
 
 alter table cargos 
 add constraint fk_pessoas_cargos 
@@ -118,17 +132,52 @@ alter table cargos
 add constraint fk_empresas_cargos 
 foreign key(id_empresa) references empresas;
 
-alter table mandatos 
-add constraint fk_pessoas_mandatos 
+
+alter table mandatos_executivos
+add constraint fk_pessoas_mandatos_executivos
 foreign key(id_pessoa) references pessoas;
 
-alter table mandatos 
-add constraint fk_partidos_mandatos 
+alter table mandatos_executivos
+add constraint fk_partidos_mandatos_executivos
 foreign key(id_partido) references partidos;
 
-alter table mandatos 
-add constraint fk_cidades_mandatos 
-foreign key(cidade, uf) references cidades(cidade, uf);
+alter table mandatos_executivos
+add constraint fk_esferas_mandatos_executivos
+foreign key(id_esfera) references esferas;
+
+
+alter table mandatos_legislativos
+add constraint fk_pessoas_mandatos_legislativos
+foreign key(id_pessoa) references pessoas;
+
+alter table mandatos_legislativos
+add constraint fk_partidos_mandatos_legislativos
+foreign key(id_partido) references partidos;
+
+alter table mandatos_legislativos
+add constraint fk_esferas_mandatos_legislativos
+foreign key(id_esfera) references esferas;
+
+
+alter table mandatos_judiciarios
+add constraint fk_pessoas_mandatos_judiciarios
+foreign key(id_pessoa) references pessoas;
+
+
+alter table cidades
+add constraint fk_estados_cidades
+foreign key(id_estado) references estados;
+
+
+alter table estados
+add constraint fk_paises_estados
+foreign key(id_pais) references paises;
+
+
+alter table pessoas_listas_negras
+add constraint fk_lst_ngr_pess_lst_ngr
+foreign key(id_lista_negra) references listas_negras;
+
 
 alter table codinomes 
 add constraint fk_pessoas_codinomes 
