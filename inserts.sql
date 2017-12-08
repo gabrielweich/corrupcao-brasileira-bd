@@ -542,3 +542,76 @@ values(
   TO_DATE('2003/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
   TO_DATE('2016/09/12 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
 );
+
+
+
+
+--Sérgio Cabral Filho
+--Deputado Estadual do Rio de Janeiro
+insert into esferas(id_esfera, id_estado)
+values(7, 19);
+
+insert into mandatos_legislativos(
+  id_mandato_legislativo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  9,
+  9,
+  2,
+  7,
+  'Deputado Estadual',
+  TO_DATE('1991/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2003/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+
+--Senador Rio de Janeiro
+insert into mandatos_legislativos(
+  id_mandato_legislativo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  10,
+  10,
+  2,
+  6,
+  'Senador',
+  TO_DATE('2003/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2006/12/15 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+
+--Governador do Rio de Janeiro
+insert into mandatos_executivos(
+  id_mandato_executivo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  6,
+  10,
+  2,
+  7,
+  'Governador',
+  TO_DATE('2007/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2014/04/03 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+
+
+
