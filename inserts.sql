@@ -194,6 +194,9 @@ values(7, 'Queiroz Galvão', 'O Grupo Queiroz Galvão S.A. é um conglomerado in
 insert into empresas(id_empresa, nome, descricao, cnpj) 
 values(8, 'Mendes Júnior', 'Mercado de construção pesada no Brasil e no exterior, desenvolvendo projetos nos segmentos de dutos, edificações, eletromecânica, energia, hidrelétricas, indústrias, infra-estrutura, manutenção industrial, petróleo e gás.', 17162082000173);
 
+insert into empresas(id_empresa, nome, descricao, cnpj) 
+values(9, 'Olimpo', 'Empresa do Gesiel', 123456789);
+
 insert into partidos(id_partido, nome, sigla, numero_eleitoral) 
 values(1, 'Partido dos Trabalhadores', 'PT', 13);
 
@@ -254,6 +257,21 @@ values(15, 'Maneta');
 insert into codinomes(id_pessoa, codinome) 
 values(16, 'Ferrari');
 
+
+insert into cargos(id_cargo, id_pessoa, id_empresa, nome, data_inicio, data_fim)
+values(1, 1, 9, 'Homão da porra', TO_DATE('2003/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'), TO_DATE('3100/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'));
+
+insert into cargos(id_cargo, id_pessoa, id_empresa, nome, data_inicio, data_fim)
+values(2, 6, 3, 'Diretor de Abastecimento da Petrobras', TO_DATE('2004/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'), TO_DATE('2012/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'));
+
+insert into cargos(id_cargo, id_pessoa, id_empresa, nome, data_inicio)
+values(3, 7, 1, 'Presidente da Organização Odebrecht', TO_DATE('2008/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),);
+
+insert into cargos(id_cargo, id_pessoa, id_empresa, nome, data_inicio, data_fim)
+values(4, 14, 3, 'Diretor de Serviços da Petrobras', TO_DATE('2003/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'), TO_DATE('2012/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'));
+
+insert into cargos(id_cargo, id_pessoa, id_empresa, nome, data_fim)
+values(5, 2, 6, 'Doleiro', TO_DATE('2014/03/17 00:00:00', 'yyyy/mm/dd hh24:mi:ss'));
 
 --José Dirceu de Oliveira e Silva--
 
