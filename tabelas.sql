@@ -156,17 +156,17 @@ foreign key(id_lista_negra) references listas_negras;
 
 
 alter table codinomes 
-add constraint fk_pessoas_codinomes 
+add constraint fk_pess_cdnm 
 foreign key(id_pessoa) references pessoas;
 
 alter table pagamentos 
-add constraint fk_empresas_pagamentos 
+add constraint fk_empr_pgmt
 foreign key(id_empresa) references empresas;
 
 alter table pagamentos 
-add constraint fk_pessoas_pagamentos_op 
+add constraint fk_pess_pgmt_op 
 foreign key(id_operador) references pessoas;
 
 alter table pagamentos 
-add constraint fk_pessoas_pagamentos_de 
+add constraint fk_pess_pgmt_de 
 foreign key(id_destinatario) references pessoas;

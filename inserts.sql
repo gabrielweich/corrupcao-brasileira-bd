@@ -260,7 +260,7 @@ insert into cargos(id_cargo, id_pessoa, id_empresa, nome, data_inicio, data_fim)
 values(2, 6, 3, 'Diretor de Abastecimento da Petrobras', TO_DATE('2004/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'), TO_DATE('2012/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'));
 
 insert into cargos(id_cargo, id_pessoa, id_empresa, nome, data_inicio)
-values(3, 7, 1, 'Presidente da Organização Odebrecht', TO_DATE('2008/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),);
+values(3, 7, 1, 'Presidente da Organização Odebrecht', TO_DATE('2008/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'));
 
 insert into cargos(id_cargo, id_pessoa, id_empresa, nome, data_inicio, data_fim)
 values(4, 14, 3, 'Diretor de Serviços da Petrobras', TO_DATE('2003/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'), TO_DATE('2012/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'));
@@ -268,14 +268,56 @@ values(4, 14, 3, 'Diretor de Serviços da Petrobras', TO_DATE('2003/01/01 00:00:
 insert into cargos(id_cargo, id_pessoa, id_empresa, nome, data_fim)
 values(5, 2, 6, 'Doleiro', TO_DATE('2014/03/17 00:00:00', 'yyyy/mm/dd hh24:mi:ss'));
 
---José Dirceu de Oliveira e Silva--
 
---Deputado Estadual de São Paulo
+
+--Deputado Estadual ou Governador de São Paulo
 insert into esferas(id_esfera, id_estado)
 values(1, 25);
 
-insert into mandatos_legislativos(
-  id_mandato_legislativo,
+--Deputado Federal ou Senador por São Paulo
+insert into esferas(id_esfera, id_estado, id_pais)
+values(2, 25, 1);
+
+--Ministro e Presidente
+insert into esferas(id_esfera, id_pais)
+values(3, 1);
+
+--Vereador e Prefeito Ribeirão Preto
+insert into esferas(id_esfera, id_cidade)
+values(4, 7);
+
+--Prefeito Ribeirão Preto
+insert into esferas(id_esfera, id_cidade)
+values(5, 7);
+
+--Deputado Federal ou Senador pelo Rio de Janeiro
+insert into esferas(id_esfera, id_estado, id_pais)
+values(6, 19, 1);
+
+--Deputado Estadual ou Governador do Rio de Janeiro
+insert into esferas(id_esfera, id_estado)
+values(7, 19);
+
+--Deputado Federal ou Senador por Minas Gerais
+insert into esferas(id_esfera, id_estado, id_pais)
+values(8, 13, 1);
+
+--Governador de minas gerais
+insert into esferas(id_esfera, id_estado)
+values(9, 13);
+
+--Deputado federal pela Bahia
+insert into esferas(id_esfera, id_estado, id_pais)
+values(10, 5, 1);
+
+--Senador pelo Mato Grosso do Sul
+insert into esferas(id_esfera, id_estado, id_pais)
+values(11, 12, 1);
+
+
+--José Dirceu de Oliveira e Silva
+insert into mandatos(
+  id_mandato,
   id_pessoa,
   id_partido,
   id_esfera,
@@ -294,12 +336,8 @@ values(
 );
 
 
---Deputado Federal por São Paulo
-insert into esferas(id_esfera, id_estado, id_pais)
-values(2, 25, 1);
-
-insert into mandatos_legislativos(
-  id_mandato_legislativo,
+insert into mandatos(
+  id_mandato,
   id_pessoa,
   id_partido,
   id_esfera,
@@ -317,8 +355,8 @@ values(
   TO_DATE('1995/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
 );
 
-insert into mandatos_legislativos(
-  id_mandato_legislativo,
+insert into mandatos(
+  id_mandato,
   id_pessoa,
   id_partido,
   id_esfera,
@@ -337,12 +375,8 @@ values(
 );
 
 
---Ministro
-insert into esferas(id_esfera, id_pais)
-values(3, 1);
-
-insert into mandatos_executivos(
-  id_mandato_executivo,
+insert into mandatos(
+  id_mandato,
   id_pessoa,
   id_partido,
   id_esfera,
@@ -351,7 +385,7 @@ insert into mandatos_executivos(
   data_fim
 )
 values(
-  1,
+  4,
   3,
   1,
   3,
@@ -361,15 +395,9 @@ values(
 );
 
 
-
 --Antonio Palocci Filho--
-
---Municipal Ribeirão Preto
-insert into esferas(id_esfera, id_cidade)
-values(4, 7);
-
-insert into mandatos_legislativos(
-  id_mandato_legislativo,
+insert into mandatos(
+  id_mandato,
   id_pessoa,
   id_partido,
   id_esfera,
@@ -378,7 +406,7 @@ insert into mandatos_legislativos(
   data_fim
 )
 values(
-  4,
+  5,
   8,
   1,
   4,
@@ -387,93 +415,8 @@ values(
   TO_DATE('1989/03/31 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
 );
 
-
---Deputado Estadual de São Paulo
-insert into mandatos_legislativos(
-  id_mandato_legislativo,
-  id_pessoa,
-  id_partido,
-  id_esfera,
-  ocupacao,
-  data_inicio,
-  data_fim
-)
-values(
-  5,
-  8,
-  1,
-  1,
-  'Deputado Estadual',
-  TO_DATE('1990/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
-  TO_DATE('1992/03/31 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
-);
-
-
---Prefeito Ribeirão Preto
-insert into esferas(id_esfera, id_cidade)
-values(5, 7);
-
-insert into mandatos_executivos(
-  id_mandato_executivo,
-  id_pessoa,
-  id_partido,
-  id_esfera,
-  ocupacao,
-  data_inicio,
-  data_fim
-)
-values(
-  2,
-  8,
-  1,
-  5,
-  'Prefeito',
-  TO_DATE('1993/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
-  TO_DATE('1996/03/31 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
-);
-
-insert into mandatos_executivos(
-  id_mandato_executivo,
-  id_pessoa,
-  id_partido,
-  id_esfera,
-  ocupacao,
-  data_inicio,
-  data_fim
-)
-values(
-  3,
-  8,
-  1,
-  5,
-  'Prefeito',
-  TO_DATE('2001/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
-  TO_DATE('2002/03/31 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
-);
-
-
-insert into mandatos_executivos(
-  id_mandato_executivo,
-  id_pessoa,
-  id_partido,
-  id_esfera,
-  ocupacao,
-  data_inicio,
-  data_fim
-)
-values(
-  4,
-  8,
-  1,
-  3,
-  'Ministro da Fazenda',
-  TO_DATE('2003/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
-  TO_DATE('2006/03/27 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
-);
-
-
-insert into mandatos_legislativos(
-  id_mandato_legislativo,
+insert into mandatos(
+  id_mandato,
   id_pessoa,
   id_partido,
   id_esfera,
@@ -485,14 +428,14 @@ values(
   6,
   8,
   1,
-  2,
-  'Deputado Federal',
-  TO_DATE('1999/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
-  TO_DATE('2001/03/31 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+  1,
+  'Deputado Estadual',
+  TO_DATE('1990/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('1992/03/31 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
 );
 
-insert into mandatos_legislativos(
-  id_mandato_legislativo,
+insert into mandatos(
+  id_mandato,
   id_pessoa,
   id_partido,
   id_esfera,
@@ -504,14 +447,14 @@ values(
   7,
   8,
   1,
-  2,
-  'Deputado Federal',
-  TO_DATE('2007/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
-  TO_DATE('2011/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+  5,
+  'Prefeito',
+  TO_DATE('1993/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('1996/03/31 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
 );
 
-insert into mandatos_executivos(
-  id_mandato_executivo,
+insert into mandatos(
+  id_mandato,
   id_pessoa,
   id_partido,
   id_esfera,
@@ -520,7 +463,85 @@ insert into mandatos_executivos(
   data_fim
 )
 values(
+  8,
+  8,
+  1,
   5,
+  'Prefeito',
+  TO_DATE('2001/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2002/03/31 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+
+insert into mandatos(
+  id_mandato,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  9,
+  8,
+  1,
+  3,
+  'Ministro da Fazenda',
+  TO_DATE('2003/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2006/03/27 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+
+insert into mandatos(
+  id_mandato,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  10,
+  8,
+  1,
+  2,
+  'Deputado Federal',
+  TO_DATE('1999/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2001/03/31 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+insert into mandatos(
+  id_mandato,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  11,
+  8,
+  1,
+  2,
+  'Deputado Federal',
+  TO_DATE('2007/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2011/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+insert into mandatos(
+  id_mandato,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  12,
   8,
   1,
   3,
@@ -531,13 +552,8 @@ values(
 
 
 --Eduardo Cunha
-
---Deputado Federal pelo Rio de Janeiro
-insert into esferas(id_esfera, id_estado, id_pais)
-values(6, 19, 1);
-
-insert into mandatos_legislativos(
-  id_mandato_legislativo,
+insert into mandatos(
+  id_mandato,
   id_pessoa,
   id_partido,
   id_esfera,
@@ -546,7 +562,7 @@ insert into mandatos_legislativos(
   data_fim
 )
 values(
-  8,
+  13,
   9,
   2,
   6,
@@ -559,12 +575,8 @@ values(
 
 
 --Sérgio Cabral Filho
---Deputado Estadual do Rio de Janeiro
-insert into esferas(id_esfera, id_estado)
-values(7, 19);
-
-insert into mandatos_legislativos(
-  id_mandato_legislativo,
+insert into mandatos(
+  id_mandato,
   id_pessoa,
   id_partido,
   id_esfera,
@@ -573,7 +585,7 @@ insert into mandatos_legislativos(
   data_fim
 )
 values(
-  9,
+  14,
   9,
   2,
   7,
@@ -583,9 +595,8 @@ values(
 );
 
 
---Senador Rio de Janeiro
-insert into mandatos_legislativos(
-  id_mandato_legislativo,
+insert into mandatos(
+  id_mandato,
   id_pessoa,
   id_partido,
   id_esfera,
@@ -594,7 +605,7 @@ insert into mandatos_legislativos(
   data_fim
 )
 values(
-  10,
+  15,
   10,
   2,
   6,
@@ -604,9 +615,8 @@ values(
 );
 
 
---Governador do Rio de Janeiro
-insert into mandatos_executivos(
-  id_mandato_executivo,
+insert into mandatos(
+  id_mandato,
   id_pessoa,
   id_partido,
   id_esfera,
@@ -615,7 +625,7 @@ insert into mandatos_executivos(
   data_fim
 )
 values(
-  6,
+  16,
   10,
   2,
   7,
@@ -626,12 +636,8 @@ values(
 
 
 --Aécio Neves--
---Deputado Federal por Minas Gerais
-insert into esferas(id_esfera, id_estado, id_pais)
-values(8, 13, 1);
-
-insert into mandatos_legislativos(
-  id_mandato_legislativo,
+insert into mandatos(
+  id_mandato,
   id_pessoa,
   id_partido,
   id_esfera,
@@ -640,7 +646,7 @@ insert into mandatos_legislativos(
   data_fim
 )
 values(
-  11,
+  17,
   11,
   3,
   8,
@@ -650,12 +656,8 @@ values(
 );
 
 
---Governador de minas gerais
-insert into esferas(id_esfera, id_estado)
-values(9, 13);
-
-insert into mandatos_executivos(
-  id_mandato_executivo,
+insert into mandatos(
+  id_mandato,
   id_pessoa,
   id_partido,
   id_esfera,
@@ -664,7 +666,7 @@ insert into mandatos_executivos(
   data_fim
 )
 values(
-  7,
+  18,
   11,
   3,
   9,
@@ -674,8 +676,8 @@ values(
 );
 
 
-insert into mandatos_legislativos(
-  id_mandato_legislativo,
+insert into mandatos(
+  id_mandato,
   id_pessoa,
   id_partido,
   id_esfera,
@@ -683,7 +685,7 @@ insert into mandatos_legislativos(
   data_inicio
 )
 values(
-  12,
+  19,
   11,
   3,
   8,
@@ -693,12 +695,8 @@ values(
 
 
 --Geddel Quadros Vieira Lima
---Deputado federal pela Bahia
-insert into esferas(id_esfera, id_estado, id_pais)
-values(10, 5, 1);
-
-insert into mandatos_legislativos(
-  id_mandato_legislativo,
+insert into mandatos(
+  id_mandato,
   id_pessoa,
   id_partido,
   id_esfera,
@@ -707,7 +705,7 @@ insert into mandatos_legislativos(
   data_fim
 )
 values(
-  13,
+  20,
   12,
   2,
   10,
@@ -717,9 +715,8 @@ values(
 );
 
 
---Ministro
-insert into mandatos_executivos(
-  id_mandato_executivo,
+insert into mandatos(
+  id_mandato,
   id_pessoa,
   id_partido,
   id_esfera,
@@ -728,7 +725,7 @@ insert into mandatos_executivos(
   data_fim
 )
 values(
-  8,
+  21,
   12,
   2,
   3,
@@ -738,8 +735,8 @@ values(
 );
 
 
-insert into mandatos_executivos(
-  id_mandato_executivo,
+insert into mandatos(
+  id_mandato,
   id_pessoa,
   id_partido,
   id_esfera,
@@ -748,7 +745,7 @@ insert into mandatos_executivos(
   data_fim
 )
 values(
-  9,
+  22,
   12,
   2,
   3,
@@ -761,8 +758,8 @@ values(
 
 --LULA
 --Deputado Federal por São Paulo
-insert into mandatos_legislativos(
-  id_mandato_legislativo,
+insert into mandatos(
+  id_mandato,
   id_pessoa,
   id_partido,
   id_esfera,
@@ -771,7 +768,7 @@ insert into mandatos_legislativos(
   data_fim
 )
 values(
-  14,
+  23,
   13,
   1,
   2,
@@ -781,8 +778,8 @@ values(
 );
 
 --Presidente
-insert into mandatos_executivos(
-  id_mandato_executivo,
+insert into mandatos(
+  id_mandato,
   id_pessoa,
   id_partido,
   id_esfera,
@@ -791,7 +788,7 @@ insert into mandatos_executivos(
   data_fim
 )
 values(
-  10,
+  24,
   13,
   1,
   3,
@@ -802,11 +799,8 @@ values(
 
 
 --Delcídio do Amaral Gómez
---Senador pelo Mato Grosso do Sul
-insert into esferas(id_esfera, id_estado, id_pais)
-values(11, 12, 1);
-insert into mandatos_legislativos(
-  id_mandato_legislativo,
+insert into mandatos(
+  id_mandato,
   id_pessoa,
   id_partido,
   id_esfera,
@@ -815,7 +809,7 @@ insert into mandatos_legislativos(
   data_fim
 )
 values(
-  15,
+  25,
   15,
   1,
   2,
