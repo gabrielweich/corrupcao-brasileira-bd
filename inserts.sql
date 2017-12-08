@@ -41,10 +41,7 @@ insert into pessoas(id_pessoa, nome, data_nascimento, cpf)
 values(14, 'Renato de Souza Duque', TO_DATE('1955/09/29 00:00:00', 'yyyy/mm/dd hh24:mi:ss'), 46764863083);
 
 insert into pessoas(id_pessoa, nome, data_nascimento, cpf) 
-values(15, 'Pedro da Silva Corrêa de Oliveira Andrade Neto', TO_DATE('1948/01/07 00:00:00', 'yyyy/mm/dd hh24:mi:ss'), 55970824852);
-
-insert into pessoas(id_pessoa, nome, data_nascimento, cpf) 
-values(16, 'Delcídio do Amaral Gómez', TO_DATE('1948/01/07 00:00:00', 'yyyy/mm/dd hh24:mi:ss'), 64603499671);
+values(15, 'Delcídio do Amaral Gómez', TO_DATE('1948/01/07 00:00:00', 'yyyy/mm/dd hh24:mi:ss'), 64603499671);
 
 
 insert into paises(id_pais, pais)
@@ -252,10 +249,8 @@ insert into codinomes(id_pessoa, codinome)
 values(14, 'My Way');
 
 insert into codinomes(id_pessoa, codinome) 
-values(15, 'Maneta');
+values(15, 'Ferrari');
 
-insert into codinomes(id_pessoa, codinome) 
-values(16, 'Ferrari');
 
 
 insert into cargos(id_cargo, id_pessoa, id_empresa, nome, data_inicio, data_fim)
@@ -534,3 +529,297 @@ values(
   TO_DATE('2011/06/07 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
 );
 
+
+--Eduardo Cunha
+
+--Deputado Federal pelo Rio de Janeiro
+insert into esferas(id_esfera, id_estado, id_pais)
+values(6, 19, 1);
+
+insert into mandatos_legislativos(
+  id_mandato_legislativo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  8,
+  9,
+  2,
+  6,
+  'Deputado Federal',
+  TO_DATE('2003/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2016/09/12 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+
+
+
+--Sérgio Cabral Filho
+--Deputado Estadual do Rio de Janeiro
+insert into esferas(id_esfera, id_estado)
+values(7, 19);
+
+insert into mandatos_legislativos(
+  id_mandato_legislativo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  9,
+  9,
+  2,
+  7,
+  'Deputado Estadual',
+  TO_DATE('1991/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2003/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+
+--Senador Rio de Janeiro
+insert into mandatos_legislativos(
+  id_mandato_legislativo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  10,
+  10,
+  2,
+  6,
+  'Senador',
+  TO_DATE('2003/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2006/12/15 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+
+--Governador do Rio de Janeiro
+insert into mandatos_executivos(
+  id_mandato_executivo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  6,
+  10,
+  2,
+  7,
+  'Governador',
+  TO_DATE('2007/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2014/04/03 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+
+--Aécio Neves--
+--Deputado Federal por Minas Gerais
+insert into esferas(id_esfera, id_estado, id_pais)
+values(8, 13, 1);
+
+insert into mandatos_legislativos(
+  id_mandato_legislativo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  11,
+  11,
+  3,
+  8,
+  'Deputado Federal',
+  TO_DATE('1987/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2002/12/17 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+
+--Governador de minas gerais
+insert into esferas(id_esfera, id_estado)
+values(9, 13);
+
+insert into mandatos_executivos(
+  id_mandato_executivo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  7,
+  11,
+  3,
+  9,
+  'Governador',
+  TO_DATE('2003/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2010/03/31 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+
+insert into mandatos_legislativos(
+  id_mandato_legislativo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio
+)
+values(
+  12,
+  11,
+  3,
+  8,
+  'Senador',
+  TO_DATE('2011/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+
+--Geddel Quadros Vieira Lima
+--Deputado federal pela Bahia
+insert into esferas(id_esfera, id_estado, id_pais)
+values(10, 5, 1);
+
+insert into mandatos_legislativos(
+  id_mandato_legislativo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  13,
+  12,
+  2,
+  10,
+  'Deputado Federal',
+  TO_DATE('1991/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2011/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+
+--Ministro
+insert into mandatos_executivos(
+  id_mandato_executivo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  8,
+  12,
+  2,
+  3,
+  'Ministro da Integração Nacional',
+  TO_DATE('2007/03/16 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2010/03/31 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+
+insert into mandatos_executivos(
+  id_mandato_executivo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  9,
+  12,
+  2,
+  3,
+  'Ministro-chefe da Secretaria de Governo',
+  TO_DATE('2007/05/12 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2016/11/25 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+
+
+--LULA
+--Deputado Federal por São Paulo
+insert into mandatos_legislativos(
+  id_mandato_legislativo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  14,
+  13,
+  1,
+  2,
+  'Deputado Federal',
+  TO_DATE('1997/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('1991/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+--Presidente
+insert into mandatos_executivos(
+  id_mandato_executivo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  10,
+  13,
+  1,
+  3,
+  'Presidente',
+  TO_DATE('2003/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2011/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+
+--Delcídio do Amaral Gómez
+--Senador pelo Mato Grosso do Sul
+insert into esferas(id_esfera, id_estado, id_pais)
+values(11, 12, 1);
+insert into mandatos_legislativos(
+  id_mandato_legislativo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  15,
+  15,
+  1,
+  2,
+  'Senador',
+  TO_DATE('2003/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2016/05/10 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
