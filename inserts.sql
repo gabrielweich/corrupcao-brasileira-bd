@@ -41,10 +41,7 @@ insert into pessoas(id_pessoa, nome, data_nascimento, cpf)
 values(14, 'Renato de Souza Duque', TO_DATE('1955/09/29 00:00:00', 'yyyy/mm/dd hh24:mi:ss'), 46764863083);
 
 insert into pessoas(id_pessoa, nome, data_nascimento, cpf) 
-values(15, 'Pedro da Silva Corrêa de Oliveira Andrade Neto', TO_DATE('1948/01/07 00:00:00', 'yyyy/mm/dd hh24:mi:ss'), 55970824852);
-
-insert into pessoas(id_pessoa, nome, data_nascimento, cpf) 
-values(16, 'Delcídio do Amaral Gómez', TO_DATE('1948/01/07 00:00:00', 'yyyy/mm/dd hh24:mi:ss'), 64603499671);
+values(15, 'Delcídio do Amaral Gómez', TO_DATE('1948/01/07 00:00:00', 'yyyy/mm/dd hh24:mi:ss'), 64603499671);
 
 
 insert into paises(id_pais, pais)
@@ -250,10 +247,7 @@ insert into codinomes(id_pessoa, codinome)
 values(14, 'My Way');
 
 insert into codinomes(id_pessoa, codinome) 
-values(15, 'Maneta');
-
-insert into codinomes(id_pessoa, codinome) 
-values(16, 'Ferrari');
+values(15, 'Ferrari');
 
 
 --José Dirceu de Oliveira e Silva--
@@ -691,7 +685,8 @@ insert into mandatos_legislativos(
   id_partido,
   id_esfera,
   ocupacao,
-  data_inicio
+  data_inicio,
+  data_fim
 )
 values(
   13,
@@ -754,7 +749,8 @@ insert into mandatos_legislativos(
   id_partido,
   id_esfera,
   ocupacao,
-  data_inicio
+  data_inicio,
+  data_fim
 )
 values(
   14,
@@ -787,7 +783,28 @@ values(
 );
 
 
-
+--Delcídio do Amaral Gómez
+--Senador pelo Mato Grosso do Sul
+insert into esferas(id_esfera, id_estado, id_pais)
+values(11, 12, 1);
+insert into mandatos_legislativos(
+  id_mandato_legislativo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  15,
+  15,
+  1,
+  2,
+  'Senador',
+  TO_DATE('2003/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2016/05/10 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
 
 
 
