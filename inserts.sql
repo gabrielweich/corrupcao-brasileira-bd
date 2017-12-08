@@ -270,20 +270,19 @@ values(5, 2, 6, 'Doleiro', TO_DATE('2014/03/17 00:00:00', 'yyyy/mm/dd hh24:mi:ss
 
 
 insert into pagamentos(id_pagamento, id_empresa, id_operador, id_destinatario, motivo, valor, data_pagamento)
-values(1, 1, 2, 1, 'Por ser esse Homem Maravilhoso', 10, TO_DATE('2003/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'))
+values(1, 1, 2, 1, 'Por ser esse Homem Maravilhoso', 10, TO_DATE('2003/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'));
 
 insert into pagamentos(id_pagamento, id_empresa, id_operador, id_destinatario, motivo, valor, data_pagamento)
-values(2, 1, 2, 13, 'Ele não sabe o motivo', 150000000, TO_DATE('2013/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'))
+values(2, 1, 2, 13, 'Ele não sabe o motivo', 150000000, TO_DATE('2013/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'));
 
 insert into pagamentos(id_pagamento, id_empresa, id_operador, id_destinatario, motivo, valor, data_pagamento)
-values(3, 1, 2, 9, 'Para salvar as criancinhas da Africa', 10000000, TO_DATE('2016/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'))
+values(3, 1, 2, 9, 'Para salvar as criancinhas da Africa', 10000000, TO_DATE('2016/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'));
 
 insert into pagamentos(id_pagamento, id_empresa, id_operador, id_destinatario, motivo, valor, data_pagamento)
-values(4, 1, 2, 9, 'Para salvar as criancinhas da Africa', 400000000, TO_DATE('2017/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'))
+values(4, 1, 2, 9, 'Para salvar as criancinhas da Africa', 400000000, TO_DATE('2017/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'));
 
 insert into pagamentos(id_pagamento, id_empresa, id_operador, id_destinatario, motivo, valor, data_pagamento)
-values(5, 1, 2, 8, 'Para repassar para o amigo', 8000000, TO_DATE('2006/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'))
---José Dirceu de Oliveira e Silva--
+values(5, 1, 2, 8, 'Para repassar para o amigo', 8000000, TO_DATE('2006/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'));
 
 
 --Deputado Estadual ou Governador de São Paulo
