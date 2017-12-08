@@ -746,5 +746,48 @@ values(
 
 
 
+--LULA
+--Deputado Federal por São Paulo
+insert into mandatos_legislativos(
+  id_mandato_legislativo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio
+)
+values(
+  14,
+  13,
+  1,
+  2,
+  'Deputado Federal',
+  TO_DATE('1997/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('1991/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+--Presidente
+insert into mandatos_executivos(
+  id_mandato_executivo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  10,
+  13,
+  1,
+  3,
+  'Presidente',
+  TO_DATE('2003/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2011/01/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+
+
+
 
 
