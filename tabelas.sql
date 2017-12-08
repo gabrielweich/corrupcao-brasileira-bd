@@ -32,24 +32,6 @@ create table partidos(
   constraint pk_partidos primary key(id_partido) 
 );
 
-create table cidades( 
-  cidade varchar(100) not null, 
-  uf varchar(2) not null, 
-  constraint pk_cidades primary key(cidade, uf) 
-);
-
-create table mandatos( 
-  id_mandato number(10) not null, 
-  id_pessoa number(10) not null, 
-  id_partido number(10) not null, 
-  data_inicio date not null, 
-  data_fim date, 
-  ocupacao varchar(150) not null, 
-  cidade varchar(100) not null, 
-  uf varchar(2) not null, 
-  constraint pk_mandatos primary key(id_mandato) 
-);
-
 create table codinomes( 
   id_pessoa number(10) not null, 
   codinome varchar(150) not null, 
@@ -66,6 +48,67 @@ create table pagamentos(
   data_pagamento date, 
   constraint pk_pagamentos primary key(id_pagamento) 
 );
+
+create table mandatos_legislativos(
+  id_mandato_legislativo number(10) not null,
+  id_pessoa number(10) not null,
+  id_partido number(10) not null,
+  id_esfera number(10) not null,
+  ocupacao varchar(150) not null,
+  data_inicio date not null, 
+  data_fim date,
+  constraint pk_mandatos_legislativos primary key (id_mandato_legislativo)
+);
+
+create table mandatos_executivos(
+  id_mandato_executivo number(10) not null,
+  id_pessoa number(10) not null,
+  id_partido number(10) not null,
+  id_esfera number(10) not null,
+  ocupacao varchar(150) not null,
+  data_inicio date not null, 
+  data_fim date,
+  constraint pk_mandatos_executivos primary key (id_mandato_executivo)
+);
+
+create table mandatos_judiciarios(
+  id_mandato_judiciario number(10) not null,
+  id_pessoa number(10) not null,
+  orgao: varchar(150) not null,
+  ocupacao varchar(150) not null,
+  data_inicio date not null, 
+  data_fim date,
+  constraint pk_mandatos_judiciarios primary key (id_mandato_judiciario)
+);
+
+create table esferas(
+  id_esfera number(10) not null,
+  id_cidade number(10) not null,
+  id_estado number(10) not null,
+  id_pais number(10) not null,
+  constraint pk_esferas primary key(id_esfera)
+);
+
+create table cidades(
+  id_cidade number(10) not null,
+  id_estado number (10) not null,
+  cidade varchar(100) not null,
+  constraint pk_cidades primary key(id_cidade)
+);
+
+create table estados(
+  id_estado number(10) not null,
+  id_pais number(10) not null,
+  estado varchar(100) not null,
+  constraint pk_estados primary key(id_estado)
+);
+
+create table paises(
+  id_pais number(10) not null,
+  pais varchar(100) not null,
+  constraint pk_paises primary key(id_pais)
+);
+
 
 alter table cargos 
 add constraint fk_pessoas_cargos 
