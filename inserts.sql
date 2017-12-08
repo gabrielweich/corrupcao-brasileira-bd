@@ -680,4 +680,71 @@ values(
 );
 
 
+--Geddel Quadros Vieira Lima
+--Deputado federal pela Bahia
+insert into esferas(id_esfera, id_estado, id_pais)
+values(10, 5, 1);
+
+insert into mandatos_legislativos(
+  id_mandato_legislativo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio
+)
+values(
+  13,
+  12,
+  2,
+  10,
+  'Deputado Federal',
+  TO_DATE('1991/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2011/02/01 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+
+--Ministro
+insert into mandatos_executivos(
+  id_mandato_executivo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  8,
+  12,
+  2,
+  3,
+  'Ministro da Integração Nacional',
+  TO_DATE('2007/03/16 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2010/03/31 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+
+insert into mandatos_executivos(
+  id_mandato_executivo,
+  id_pessoa,
+  id_partido,
+  id_esfera,
+  ocupacao,
+  data_inicio,
+  data_fim
+)
+values(
+  9,
+  12,
+  2,
+  3,
+  'Ministro-chefe da Secretaria de Governo',
+  TO_DATE('2007/05/12 00:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+  TO_DATE('2016/11/25 00:00:00', 'yyyy/mm/dd hh24:mi:ss')
+);
+
+
+
+
 
