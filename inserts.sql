@@ -46,38 +46,129 @@ values(15, 'Pedro da Silva Corrêa de Oliveira Andrade Neto', TO_DATE('1948/01/0
 insert into pessoas(id_pessoa, nome, data_nascimento, cpf) 
 values(16, 'Delcídio do Amaral Gómez', TO_DATE('1948/01/07 00:00:00', 'yyyy/mm/dd hh24:mi:ss'), 64603499671);
 
-insert into cidades(cidade, uf) 
-values('Porto Alegre','RS');
 
-insert into cidades(cidade, uf) 
-values('Londrina','PR');
+insert into paises(id_pais, pais)
+values(1, 'Brasil');
 
-insert into cidades(cidade, uf) 
-values('Passa Quatro','MG');
 
-insert into cidades(cidade, uf) 
-values('Rio de Janeiro','RJ');
+insert into estados(id_estado, id_pais, estado)
+values(1, 1, 'Acre');
 
-insert into cidades(cidade, uf) 
-values('São Paulo','SP');
+insert into estados(id_estado, id_pais, estado)
+values(2, 1, 'Alagoas');
 
-insert into cidades(cidade, uf) 
-values('Salvador','BH');
+insert into estados(id_estado, id_pais, estado)
+values(3, 1, 'Amapá');
 
-insert into cidades(cidade, uf) 
-values('Ribeirão Preto','SP');
+insert into estados(id_estado, id_pais, estado)
+values(4, 1, 'Amazonas');
 
-insert into cidades(cidade, uf) 
-values('Cascadura','RJ');
+insert into estados(id_estado, id_pais, estado)
+values(5, 1, 'Bahia');
 
-insert into cidades(cidade, uf) 
-values('Belo Horizonte','MG');
+insert into estados(id_estado, id_pais, estado)
+values(6, 1, 'Ceará');
 
-insert into cidades(cidade, uf) 
-values('Caetés','PE');
+insert into estados(id_estado, id_pais, estado)
+values(7, 1, 'Distrito Federal');
 
-insert into cidades(cidade, uf) 
-values('Cruzeiro','SP');
+insert into estados(id_estado, id_pais, estado)
+values(8, 1, 'Espírito Santo');
+
+insert into estados(id_estado, id_pais, estado)
+values(9, 1, 'Goiás');
+
+insert into estados(id_estado, id_pais, estado)
+values(10, 1, 'Maranhão');
+
+insert into estados(id_estado, id_pais, estado)
+values(11, 1, 'Mato Grosso');
+
+insert into estados(id_estado, id_pais, estado)
+values(12, 1, 'Mato Grosso do Sul');
+
+insert into estados(id_estado, id_pais, estado)
+values(13, 1, 'Minas Gerais');
+
+insert into estados(id_estado, id_pais, estado)
+values(14, 1, 'Pará');
+
+insert into estados(id_estado, id_pais, estado)
+values(15, 1, 'Paraíba');
+
+insert into estados(id_estado, id_pais, estado)
+values(16, 1, 'Paraná');
+
+insert into estados(id_estado, id_pais, estado)
+values(17, 1, 'Pernambuco');
+
+insert into estados(id_estado, id_pais, estado)
+values(18, 1, 'Piauí');
+
+insert into estados(id_estado, id_pais, estado)
+values(19, 1, 'Rio de Janeiro');
+
+insert into estados(id_estado, id_pais, estado)
+values(20, 1, 'Rio Grande do Norte');
+
+insert into estados(id_estado, id_pais, estado)
+values(21, 1, 'Rio Grande do Sul');
+
+insert into estados(id_estado, id_pais, estado)
+values(22, 1, 'Rondônia');
+
+insert into estados(id_estado, id_pais, estado)
+values(23, 1, 'Roraima');
+
+insert into estados(id_estado, id_pais, estado)
+values(24, 1, 'Santa Catarina');
+
+insert into estados(id_estado, id_pais, estado)
+values(25, 1, 'São Paulo');
+
+insert into estados(id_estado, id_pais, estado)
+values(26, 1, 'Sergipe');
+
+insert into estados(id_estado, id_pais, estado)
+values(27, 1, 'Tocantins');
+
+
+
+
+insert into cidades(id_cidade, id_estado, cidade) 
+values(1, 21, 'Porto Alegre');
+
+insert into cidades(id_cidade, id_estado, cidade) 
+values(2, 16, 'Londrina');
+
+insert into cidades(id_cidade, id_estado, cidade) 
+values(3, 13, 'Passa Quatro');
+
+insert into cidades(id_cidade, id_estado, cidade) 
+values(4, 19, 'Rio de Janeiro');
+
+insert into cidades(id_cidade, id_estado, cidade) 
+values(5, 25, 'São Paulo');
+
+insert into cidades(id_cidade, id_estado, cidade) 
+values(6, 5, 'Salvador');
+
+insert into cidades(id_cidade, id_estado, cidade) 
+values(7, 25, 'Ribeirão Preto');
+
+insert into cidades(id_cidade, id_estado, cidade) 
+values(8, 19, 'Cascadura');
+
+insert into cidades(id_cidade, id_estado, cidade) 
+values(9, 13, 'Belo Horizonte');
+
+insert into cidades(id_cidade, id_estado, cidade) 
+values(10, 17, 'Caetés');
+
+insert into cidades(id_cidade, id_estado, cidade) 
+values(11, 25, 'Cruzeiro');
+
+
 
 insert into empresas(id_empresa, nome, descricao, cnpj) 
 values(1, 'Odebrecht', 'A Organização Odebrecht é um conglomerado empresarial brasileiro de capital fechado que atua nos setores de Engenharia, Infraestrutura, Indústria, Energia, Transportes e Meio Ambiente.', 15101288000182);
