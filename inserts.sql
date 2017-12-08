@@ -47,6 +47,15 @@ values(15, 'Delcídio do Amaral Gómez', TO_DATE('1948/01/07 00:00:00', 'yyyy/mm
 insert into paises(id_pais, pais)
 values(1, 'Brasil');
 
+insert into paises(id_pais, pais)
+values(2, 'Suíça');
+
+insert into paises(id_pais, pais)
+values(3, 'Estados Unidos');
+
+insert into paises(id_pais, pais)
+values(4, 'França');
+
 
 insert into estados(id_estado, id_pais, estado)
 values(1, 1, 'Acre');
