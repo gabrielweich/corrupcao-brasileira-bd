@@ -135,38 +135,40 @@ values(27, 1, 'Tocantins');
 
 
 
-insert into cidades(cidade, uf) 
-values('Porto Alegre','RS');
+insert into cidades(id_cidade, id_estado, cidade) 
+values(1, 21, 'Porto Alegre');
 
-insert into cidades(cidade, uf) 
-values('Londrina','PR');
+insert into cidades(id_cidade, id_estado, cidade) 
+values(2, 16, 'Londrina');
 
-insert into cidades(cidade, uf) 
-values('Passa Quatro','MG');
+insert into cidades(id_cidade, id_estado, cidade) 
+values(3, 13, 'Passa Quatro');
 
-insert into cidades(cidade, uf) 
-values('Rio de Janeiro','RJ');
+insert into cidades(id_cidade, id_estado, cidade) 
+values(4, 19, 'Rio de Janeiro');
 
-insert into cidades(cidade, uf) 
-values('São Paulo','SP');
+insert into cidades(id_cidade, id_estado, cidade) 
+values(5, 25, 'São Paulo');
 
-insert into cidades(cidade, uf) 
-values('Salvador','BH');
+insert into cidades(id_cidade, id_estado, cidade) 
+values(6, 5, 'Salvador');
 
-insert into cidades(cidade, uf) 
-values('Ribeirão Preto','SP');
+insert into cidades(id_cidade, id_estado, cidade) 
+values(7, 25, 'Ribeirão Preto');
 
-insert into cidades(cidade, uf) 
-values('Cascadura','RJ');
+insert into cidades(id_cidade, id_estado, cidade) 
+values(8, 19, 'Cascadura');
 
-insert into cidades(cidade, uf) 
-values('Belo Horizonte','MG');
+insert into cidades(id_cidade, id_estado, cidade) 
+values(9, 13, 'Belo Horizonte');
 
-insert into cidades(cidade, uf) 
-values('Caetés','PE');
+insert into cidades(id_cidade, id_estado, cidade) 
+values(10, 17, 'Caetés');
 
-insert into cidades(cidade, uf) 
-values('Cruzeiro','SP');
+insert into cidades(id_cidade, id_estado, cidade) 
+values(11, 25, 'Cruzeiro');
+
+
 
 insert into empresas(id_empresa, nome, descricao, cnpj) 
 values(1, 'Odebrecht', 'A Organização Odebrecht é um conglomerado empresarial brasileiro de capital fechado que atua nos setores de Engenharia, Infraestrutura, Indústria, Energia, Transportes e Meio Ambiente.', 15101288000182);
