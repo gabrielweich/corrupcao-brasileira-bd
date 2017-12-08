@@ -109,6 +109,20 @@ create table paises(
   constraint pk_paises primary key(id_pais)
 );
 
+create table listas_negras(
+  id_lista_negra number(10) not null,
+  nome varchar(100) not null,
+  constraint pk_listas_negras primary key(id_lista_negra)
+);
+
+create table pessoas_listas_negras(
+  id_pessoa number(10) not null,
+  id_lista_negra number(10) not null,
+  motivo varchar(150),
+  vivo varchar(1) not null CHECK(vivo IN ('S','N')),
+  constraint pk_pessoas_listas_negras primary key(id_pessoa, id_lista_negra)
+);
+
 
 alter table cargos 
 add constraint fk_pessoas_cargos 
